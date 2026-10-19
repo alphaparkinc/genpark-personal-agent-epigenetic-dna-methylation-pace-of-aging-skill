@@ -1,0 +1,79 @@
+{
+  "name": "genpark-personal-agent-epigenetic-dna-methylation-pace-of-aging-skill",
+  "version": "1.0.0",
+  "title": "Epigenetic DNA Methylation & DunedinPACE Biological Aging Tracker Skill",
+  "description": "Epigenetic Horvath clock & DunedinPACE DNA methylation telemetry parsing, biological rate of aging benchmarking, targeted longevity methyl-donor nutrient synthesizer, and aging deceleration protocol copilot. Built for GenPark (https://www.genpark.ai).",
+  "homepage": "https://www.genpark.ai",
+  "linkedin": "https://www.linkedin.com/company/92955550",
+  "category": "personal-agent",
+  "topics": [
+    "epigenetics",
+    "dna-methylation",
+    "dunedinpace",
+    "biological-aging",
+    "longevity",
+    "personal-agent",
+    "model-context-protocol",
+    "genpark"
+  ],
+  "tools": [
+    {
+      "name": "audit_dunedin_pace_of_aging",
+      "description": "Evaluate DunedinPACE epigenetic pace of aging, GrimAge acceleration delta, and mortality hazard ratio against standard chronological baseline.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "dunedin_pace": {
+            "type": "number",
+            "description": "e.g. 0.85 years of biological aging per calendar year"
+          },
+          "chronological_age": {
+            "type": "integer"
+          },
+          "grim_age_years": {
+            "type": "number"
+          },
+          "telomere_percentile": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "dunedin_pace",
+          "chronological_age",
+          "grim_age_years"
+        ]
+      }
+    },
+    {
+      "name": "synthesize_epigenetic_rejuvenation_protocol",
+      "description": "Synthesize personalized methyl-donor nutrition, NAD+ replenishment, and circadian fasting protocol to decelerate epigenetic drift.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "pace_tier": {
+            "type": "string",
+            "enum": [
+              "slow_aging",
+              "average_aging",
+              "accelerated_aging",
+              "hyper_accelerated_aging"
+            ]
+          },
+          "primary_epigenetic_target": {
+            "type": "string",
+            "enum": [
+              "dna_repair_nad",
+              "homocysteine_methylation",
+              "autophagy_mTOR",
+              "mitochondrial_biogenesis"
+            ]
+          }
+        },
+        "required": [
+          "pace_tier",
+          "primary_epigenetic_target"
+        ]
+      }
+    }
+  ]
+}
